@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     tools:context="com.example.android.courtcounter.MainActivity">
 
-    <LinearLayout
+    <View
         android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/fake"
+        android:layout_centerInParent="true"/>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_weight="1">
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@id/fake">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,10 +51,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_weight="1">
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@id/fake">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,7 +88,32 @@
             android:layout_margin="8dp"
             android:onClick="freeTB"/>
     </LinearLayout>
-</LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"
+        android:text="Result"
+        android:onClick="resetOn"
+        android:id="@+id/buttonPanel"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonPanel"
+        android:id="@+id/fake1"
+        android:text="Reset"
+        android:onClick="reset"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fake1"
+        android:layout_centerInParent="true"
+        android:id="@+id/result"
+        android:textSize="36sp"
+        android:fontFamily="sans-serif-Light"/>
+</RelativeLayout>
 
 
 

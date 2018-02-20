@@ -55,4 +55,32 @@ public class MainActivity extends AppCompatActivity {
         scoreTeamB+=1;
         displayForTeamB(scoreTeamB);
     }
+
+    public void resetOn(View view) {
+
+            if(scoreTeamA>scoreTeamB){
+                displayResult(scoreTeamA-scoreTeamB,"Team A Won By ");
+            }else if(scoreTeamA==scoreTeamB){
+                displayResult(scoreTeamB-scoreTeamA,"It's a Tie ");
+            }else {
+                displayResult(scoreTeamB-scoreTeamA,"Team B Won By ");
+            }
+
+    }
+    public void displayResult(int result, String msg){
+        TextView resultView = (TextView) findViewById(R.id.result);
+        if(result==0){
+            resultView.setText(String.valueOf(msg));
+        }else {
+        resultView.setText(String.valueOf(msg+result));
+    }
+    }
+
+    public void reset(View view) {
+        scoreTeamA=0;
+        scoreTeamB=0;
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
+        displayResult(0,"");
+    }
 }
