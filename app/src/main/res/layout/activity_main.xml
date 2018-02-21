@@ -1,118 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.courtcounter.MainActivity">
+    tools:context="com.example.android.courtcounter.MainActivity"
+    >
 
     <View
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:id="@+id/fake"
-        android:layout_centerInParent="true"/>
+        android:layout_width="2dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/darker_gray"
+        android:layout_margin="20dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_alignParentLeft="true"
-        android:layout_alignRight="@id/fake">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Team A"
-        android:layout_gravity="center"
-        android:padding="4dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:layout_gravity="center"
-        android:id="@+id/team_a_score"
-        android:padding="4dp"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="+3 points"
-        android:layout_margin="8dp"
-        android:onClick="add3"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="+2 points"
-        android:layout_margin="8dp"
-        android:onClick="add2"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="free throw"
-        android:layout_margin="8dp"
-        android:onClick="freeT"/>
+        android:layout_alignRight="@id/fake"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="4dp"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="24sp"
+            android:text="Team A" />
+
+        <TextView
+            android:id="@+id/team_a_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="4dp"
+            android:textSize="36sp"
+            android:fontFamily="sans-serif-medium"
+            android:text="0" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="add3"
+            android:text="+3 points" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="add2"
+            android:text="+2 points" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="freeT"
+            android:text="free throw" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_alignLeft="@id/fake"
         android:layout_alignParentRight="true"
-        android:layout_alignLeft="@id/fake">
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Team A"
             android:layout_gravity="center"
-            android:padding="4dp"/>
+            android:padding="4dp"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Team A" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:layout_gravity="center"
             android:id="@+id/team_b_score"
-            android:padding="4dp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="4dp"
+            android:textSize="36sp"
+            android:fontFamily="sans-serif-medium"
+            android:text="0" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="+3 points"
             android:layout_margin="8dp"
-            android:onClick="add3B"/>
+            android:onClick="add3B"
+            android:text="+3 points" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="+2 points"
             android:layout_margin="8dp"
-            android:onClick="add2B"/>
+            android:onClick="add2B"
+            android:text="+2 points" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="free throw"
             android:layout_margin="8dp"
-            android:onClick="freeTB"/>
+            android:onClick="freeTB"
+            android:text="free throw" />
     </LinearLayout>
+
     <Button
+        android:id="@+id/buttonPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
         android:layout_alignParentBottom="true"
-        android:text="Result"
+        android:layout_margin="8dp"
         android:onClick="resetOn"
-        android:id="@+id/buttonPanel"/>
+        android:text="Result" />
+
     <Button
+        android:id="@+id/fake1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/buttonPanel"
-        android:id="@+id/fake1"
-        android:text="Reset"
+        android:layout_centerInParent="true"
+        android:layout_margin="8dp"
         android:onClick="reset"
-        android:layout_margin="10dp"
-        android:layout_centerInParent="true"/>
+        android:text="Reset" />
+
     <TextView
+        android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/fake1"
         android:layout_centerInParent="true"
-        android:id="@+id/result"
-        android:textSize="36sp"
-        android:fontFamily="sans-serif-Light"/>
+        android:fontFamily="sans-serif-Light"
+        android:textSize="28sp" />
 </RelativeLayout>
 
 
