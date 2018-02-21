@@ -8,11 +8,11 @@ there is reset button to erase all the written data from the screen and re start
 
 initially:
 
-![title](https://github.com/shashankesh/CourtCounter/blob/master/Reset.png)
+![title](https://github.com/shashankesh/CourtCounter/blob/master/reset.png)
 
 after giving points
 
-![title](https://github.com/shashankesh/CourtCounter/blob/master/ResultNotClicked.png)
+![title](https://github.com/shashankesh/CourtCounter/blob/master/nothingClicked.png)
 
 After clicking result:
 
@@ -25,4 +25,4 @@ If tie:
 
 After clicking Reset :
 
-![title](https://github.com/shashankesh/CourtCounter/blob/master/Reset.png)
+![title](https://github.com/shashankesh/CourtCounter/blob/master/reset.png)
